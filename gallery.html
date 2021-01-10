@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      body {
+        line-height: 1.7;
+        color: #4d4d4d;
+        font-weight: 400;
+        font-size: 1rem;
+        overflow-x: hidden !important;
+      }
+      .pic {
+        max-width: 100%;
+        height: 781px;
+        width: 100%;
+      }
+      .picT {
+        max-width: 100%;
+        height: 20vh;
+      }
+      @media only screen and (min-width: 700px) and (max-width: 1024px) {
+        .picT {
+          max-width: 100%;
+          height: 10vh;
+        }
+        img.d-block.w-100 {
+          height: 50vh;
+        }
+
+        .pic {
+          max-width: 100%;
+          height: 581px;
+          width: 100%;
+        }
+        .containerN .card:not(:nth-child(5)) {
+          margin: auto !important;
+        }
+      }
+
+      .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+
+      .logoImg {
+        width: 100%;
+        margin-top: -56%;
+        margin-bottom: -48%;
+        margin-left: -26%;
+      }
+
+      @media only screen and (min-width: 375px) and (max-width: 812px) {
+        .containerN .card:not(:nth-child(5)) {
+          margin: auto !important;
+        }
+        img.d-block.w-100 {
+          height: 50vh !important;
+        }
+
+        .logoImg {
+          width: 59%;
+          margin-top: -60%;
+          margin-bottom: -56%;
+          margin-left: -21%;
+        }
+        .site-blocks-cover.overlay {
+          position: relative;
+          background-position: 44% 1px !important;
+        }
+        .containerN {
+          flex-direction: column;
+          transform: none !important;
+        }
+
+        .containerN .card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 1s ease-in-out;
+          filter: brightness(0.5);
+        }
+
+        .containerN .card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 1s ease-in-out;
+          filter: brightness(0.5);
+        }
+        @media only screen and (min-width: 768px) and (max-width: 768px) {
+          img.d-block.w-100 {
+            height: 50vh !important;
+          }
+
+          .logoImg {
+            width: 40%;
+            margin-top: -57%;
+            margin-bottom: -56%;
+            margin-left: -11%;
+          }
+          .containerN .card:not(:nth-child(5)) {
+            margin: auto !important;
+          }
+          .containerN {
+            flex-direction: column;
+            transform: none !important;
+          }
+          .containerN .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s ease-in-out;
+            filter: brightness(0.5);
+          }
+          .containerN .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s ease-in-out;
+            filter: brightness(0.5);
+          }
+          .containerN .card:not(:nth-child(5)) {
+            margin: auto !important;
+          }
+        }
+      }
+      @media only screen and (min-width: 320px) and (max-width: 360px) {
+        .logoImg {
+          margin-left: 55px;
+          width: 64%;
+          margin-top: -64%;
+          margin-bottom: -62%;
+        }
+        img.d-block.w-100 {
+          height: 50vh !important;
+        }
+        .containerN .card:not(:nth-child(5)) {
+          margin: auto !important;
+        }
+
+        .site-blocks-cover.overlay {
+          position: relative;
+          background-position: 44% 1px !important;
+        }
+        .containerN {
+          flex-direction: column;
+          transform: none !important;
+        }
+        .containerN .card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 1s ease-in-out;
+          filter: brightness(0.5);
+        }
+      }
+
+      .containerN {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10vmin;
+        overflow: hidden;
+        transform: skew(5deg);
+      }
+      .containerN .card {
+        flex: 1;
+        transition: all 1s ease-in-out;
+        height: 75vmin;
+        position: relative;
+      }
+      .containerN .card .card__head {
+        color: black;
+        background: rgba(255, 30, 173, 0.75);
+        padding: 0.5em;
+        transform: rotate(-90deg);
+        transform-origin: 0% 0%;
+        transition: all 0.5s ease-in-out;
+        min-width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1em;
+        white-space: nowrap;
+      }
+      .containerN .card:hover {
+        flex-grow: 10;
+      }
+      .containerN .card:hover img {
+        filter: grayscale(0);
+      }
+      .containerN .card:hover .card__head {
+        text-align: center;
+        top: calc(100% - 2em);
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 2em;
+        transform: rotate(0deg) skew(-5deg);
+      }
+      .containerN .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s ease-in-out;
+        filter: grayscale(100%);
+      }
+      .containerN .card:not(:nth-child(5)) {
+        margin-right: 1em;
+      }
+
+      img.d-block.w-100 {
+        height: 80vh;
+      }
+
+      .p {
+        text-align: center;
+        padding-top: 40px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-wrap">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+     
+      <div class="border-bottom top-bar py-2 bg-dark" id="home-section">
+        
+      </div>
+  
+      <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
+  
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <div class="col-11 col-xl-2">
+             <a href="index.html" class="text-black h2 mb-0">
+                <img src="./images/logo.png" alt="" class='logoImg' >
+              
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+  
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li><a href="./index.html" class="nav-link">Home</a></li>
+                
+                </ul>
+              </nav>
+            </div>
+  
+  
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+  
+          </div>
+        </div>
+        
+      </header>
+    <section class="site-section" id="work-section">
+    
+      <div class="container-fluid">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="downmemoryline.jpeg"
+                data-color="lightblue"
+                alt="First Image"
+              />
+              <div class="carousel-caption d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="car.jpeg"
+                data-color="firebrick"
+                alt="Second Image"
+              />
+              <div class="carousel-caption d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="Praize1.jpeg"
+                data-color="violet"
+                alt="Third Image"
+              />
+              <div class="carousel-caption d-md-block"></div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <div class="containerN">
+          <div class="card">
+            <img src="brightC.jpeg" />
+          </div>
+          <div class="card">
+            <img src="d.jpeg" />
+          </div>
+          <div class="card">
+            <img src="ds.jpeg" />
+          </div>
+
+          <div class="card">
+            <img src="tpc.jpeg" />
+          </div>
+          <div class="card">
+            <img src="du2.jpeg" />
+          </div>
+          <div class="card">
+            <img src="g.jpeg" />
+          </div>
+          <div class="card">
+            <img src="gra.jpeg" />
+          </div>
+        </div>
+        <div class="containerN">
+          <div class="card">
+            <img src="gra1.jpeg" />
+          </div>
+          <div class="card">
+            <img src="gra5.jpeg" />
+          </div>
+          <div class="card">
+            <img src="ossymax.jpeg" />
+          </div>
+          <div class="card">
+            <img src="p3.jpeg" />
+          </div>
+          <div class="card">
+            <img src="Praize4.jpeg" />
+          </div>
+
+          <div class="card">
+            <img src="p4.jpeg" />
+          </div>
+          <div class="card">
+            <img src="p5.jpeg" />
+          </div>
+        </div>
+        <div class="containerN">
+          <div class="card">
+            <img src="p6.jpeg" />
+          </div>
+          <div class="card">
+            <img src="p7.jpeg" />
+          </div>
+          <div class="card">
+            <img src="p8.jpeg" />
+          </div>
+          <div class="card">
+            <img src="Praize.jpeg" />
+          </div>
+          <div class="card">
+            <img src="Praize1.jpeg" />
+            <div class="card">
+              <img src="Praize3.jpeg" />
+            </div>
+          </div>
+          <div class="card">
+            <img src="Praize2.jpeg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <a href="#" class="bg-primary py-5 d-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md10"><h2 class="text-white">Let's Get Started</h2></div>
+        </div>
+      </div>  
+    </a>
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">Purpose</h2>
+                <p>  Taking the talents out of the streets to stardom. 
+                </p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Features</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="https://www.facebook.com/karismusicofficial" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/karismusicoffi1" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/karismusic_official/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+       
+      </div>
+    </footer>
+
+    </div>
+
+    <script>
+      var typed = new Typed(".typed-words", {
+        strings: ["voice"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true,
+      });
+
+      $(".carousel").carousel({
+        interval: 2000,
+        pause: "false",
+      });
+    </script>
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+
+<script src="js/typed.js"></script>
+          <script>
+          var typed = new Typed('.typed-words', {
+          strings: ["voice"],
+          typeSpeed: 80,
+          backSpeed: 80,
+          backDelay: 4000,
+          startDelay: 1000,
+          loop: true,
+          showCursor: true
+          });
+
+          $('.carousel').carousel({
+interval: 2000,
+pause: "false"
+});
+          </script>
+
+<script src="js/main.js"></script>
+
+
+<script src="radios/js/circleaudioplayer.js"></script>
+  </body>
+</html>
