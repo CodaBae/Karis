@@ -344,9 +344,9 @@ img.d-block.w-100 {
                   </ul>
                 </li>
                 <li>
-                  <a onclick="history.go('./events.html')" href="./events.html" class="nav-link">Events</a>
+                  <a  onclick="goE()" class="nav-link">Events</a>
                 </li>
-                <li><a onclick="history.go('./gallery.html')" href="./gallery.html" class="nav-link">Gallery</a></li>
+                <li><a onclick="goG()"  class="nav-link">Gallery</a></li>
 
                
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
@@ -972,6 +972,18 @@ img.d-block.w-100 {
   <script src="js/aos.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
+  <script>
+    function goE() {
+      console.log('sis')
+      location.replace('https://codabae.github.io/Karis.github.io/events.html');
+}
+
+function goG() {
+  console.log('bruh')
+
+  location.replace('https://codabae.github.io/Karis.github.io/gallery.html');
+}
+  </script>
 
   <script src="js/typed.js"></script>
             <script>
